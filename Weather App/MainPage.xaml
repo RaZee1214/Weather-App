@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Weather_App.MainPage">
+    <ScrollView>
+        <StackLayout BackgroundColor="#39294C">
+        <Frame BackgroundColor="#654886" Padding="24" CornerRadius="0">
+            <Grid>
+                <Image Source="rain.png"
+                       WidthRequest="60"
+                       HeightRequest="60"
+                       Grid.Column="0"
+                       x:Name="Image"/>
+                <Label x:Name="currentTemp" Text="-23°" HorizontalTextAlignment="Center" TextColor="White" FontSize="100" Grid.Column="1"/>
+            </Grid>
+        </Frame>
+
+            <Label
+                x:Name="currentDay"
+                Text="Days"
+                TextColor="White"
+                FontSize="22"
+                Padding="2"
+                HorizontalTextAlignment="Center" 
+                />
+
+            <Grid>
+            <Label Text="Humidity" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="UV Index" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Visibility" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+            <Label Text="Dew Point" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="0"/>
+
+            <Label x:Name="humidityTemp" Text="90%" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+            <Label x:Name="UVTemp" Text="Low, 0" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+            <Label x:Name="visibilityTemp" Text="16km" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="2" Grid.Column="1"/>
+            <Label x:Name="dewTemp" Text="-2°" TextColor="White" FontSize="20" Padding="0,10,0,0" HorizontalTextAlignment="Center" Grid.Row="3" Grid.Column="1"/>
+        </Grid>
+
+        <Grid Margin="0,20,0,0">
+
+            <!--Info-->
+                <Label
+                    Text="Days"
+                    TextColor="White"
+                    FontSize="22"
+                    TextDecorations="Underline"
+                    Padding="30,10,0,0"
+                    HorizontalTextAlignment="Center" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                    />
+                <Label
+                    Text="Day / Night"
+                    TextColor="White"
+                    FontSize="22"
+                    TextDecorations="Underline"
+                    Padding="-30,10,0,0"
+                    HorizontalTextAlignment="Center" 
+                    Grid.Row="0" 
+                    Grid.Column="2"
+                    />
+
+                <!--Days-->
+            <Label 
+                x:Name="day1"
+                Text="Monday" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="1" 
+                Grid.Column="0"/>
+            
+            <Label 
+                x:Name="day2"
+                Text="Tuesday" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="2" 
+                Grid.Column="0"/>
+            
+            <Label 
+                x:Name="day3"
+                Text="Wednesday" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="3" 
+                Grid.Column="0"/>
+            
+            <Label 
+                x:Name="day4"
+                Text="Thursday" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="4" 
+                Grid.Column="0"/>
+            
+            <!--Days Img-->
+            <Image 
+                Source="rain.png"
+                Margin="0,10,0,0"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Column="1"
+                Grid.Row="1"
+                x:Name="day1Image"/>
+            <Image 
+                Source="rain.png"
+                Margin="0,10,0,0"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Column="1"
+                Grid.Row="2"
+                x:Name="day2Image"/>
+            <Image 
+                Source="rain.png"
+                Margin="0,10,0,0"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Column="1"
+                Grid.Row="3"
+                x:Name="day3Image"/>
+            <Image 
+                Source="rain.png"
+                Margin="0,10,0,0"
+                WidthRequest="20"
+                HeightRequest="20"
+                Grid.Column="1"
+                Grid.Row="4"
+                x:Name="day4Image"/>
+
+
+            <!--Days Temp-->
+            <Label 
+                x:Name="day1Stats"
+                Text="3° / -7°" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="-30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="1" 
+                Grid.Column="2"/>
+            
+            <Label
+                x:Name="day2Stats"
+                Text="6° / -1°" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="-30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="2" 
+                Grid.Column="2"/>
+            
+            <Label 
+                x:Name="day3Stats"
+                Text="8° / 0°" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="-30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="3" 
+                Grid.Column="2"/>
+            
+            <Label 
+                x:Name="day4Stats"
+                Text="-1° / -7°" 
+                TextColor="White"
+                FontSize="20" 
+                Padding="-30,10,0,0" 
+                HorizontalTextAlignment="Center" 
+                Grid.Row="4" 
+                Grid.Column="2"/>
+            
+        </Grid>
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>
